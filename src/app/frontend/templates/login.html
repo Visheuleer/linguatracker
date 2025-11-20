@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ListenFlow — Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+
+<body>
+    <div class="bg-gradient"></div>
+    <div class="bg-overlay"></div>
+
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="login-wrap">
+        <div class="login-card">
+
+            <div class="brand">
+                <div class="logo">
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="LinguaTracker Logo" class="logo-img">
+                    <div class="logo-glow"></div>
+                </div>
+                <div class="brand-text">
+                    <h1>Lingua Tracker</h1>
+                    <p class="subtitle">Track your progress, master your language.</p>
+                </div>
+            </div>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <div class="input-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <input type="email" id="email" name="email" placeholder="Email" required />
+                </div>
+
+                <div class="input-group">
+                    <div class="input-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <input type="password" id="password" name="password" placeholder="Senha" required />
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <span class="btn-text">Entrar</span>
+                    <div class="btn-glow"></div>
+                </button>
+            </form>
+
+            <p id="error" class="error-text" style="display:none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                Email ou senha incorretos
+            </p>
+
+            <div class="footer-links">
+                <a href="#">Esqueci a senha</a>
+                <span class="divider">•</span>
+                <a href="#">Criar conta</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</body>
+</html>
